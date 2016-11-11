@@ -37,12 +37,21 @@ private:
     }
 
     static void work_routine(uv_work_t* req){
-        sleep(2000);
+        sleep(2);
     }
 
     static void on_work_complete(uv_work_t* req, int status){
         printf("work complete --> %d\n",status);
-        uv_write(,(uv_stream_t*)(req->data));
+        static uv_write_t req2;
+        char *text="HTTP/1.1 200 OK\r\nContent-Length: 11\r\n\r\nHello,World";
+        uv_buf_t buf;
+        buf.base=text;
+        buf.len=strlen(text);
+        uv_write(&req2,(uv_stream_t*)(req->data),&buf,1,&tcp_worker::on_write);
+    }
+
+    static void on_write(uv_write_t* req, int status) {
+        /* Logic which handles the write result */
     }
 
     static void on_read(uv_stream_t* stream,ssize_t nread,const uv_buf_t* buf){
