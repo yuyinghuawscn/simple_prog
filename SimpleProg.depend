@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1478859022 source:d:\cwork\simpleprog\main.cpp
+	"stdio.h"
+	"uv.h"
+	"unistd.h"
+
+1478845030 d:\cwork\simpleprog\excited.h
+	"stdio.h"
+
+1437213665 d:\myapp\msys64\mingw64\include\uv.h
+	"uv-errno.h"
+	"uv-version.h"
+	<stddef.h>
+	"stdint-msvc2008.h"
+	<stdint.h>
+	"uv-win.h"
+	"uv-unix.h"
+
+1437213665 d:\myapp\msys64\mingw64\include\uv-errno.h
+	<errno.h>
+
+1437213665 d:\myapp\msys64\mingw64\include\uv-version.h
+
+1437213665 d:\myapp\msys64\mingw64\include\uv-win.h
+	<winsock2.h>
+	<mswsock.h>
+	<ws2tcpip.h>
+	<windows.h>
+	<process.h>
+	<signal.h>
+	<sys/stat.h>
+	"stdint-msvc2008.h"
+	<stdint.h>
+	"tree.h"
+	"uv-threadpool.h"
+
+1437213665 d:\myapp\msys64\mingw64\include\tree.h
+
+1437213665 d:\myapp\msys64\mingw64\include\uv-threadpool.h
+
